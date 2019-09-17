@@ -8,5 +8,7 @@ class Model {
 	public static function Init() {
 		self::$pdo = new PDO("mysql:host=Conf::getHostname();dbname=Conf::getDatabase()",Conf::getLogin(),Conf::getPassword());
 	}
+	
+	Model::Init();
 }
 ?>

@@ -1,5 +1,8 @@
 <?php
 class Conf {
+
+  // la variable debug est un boolean
+  static private $debug = True; 
    
   static private $databases = array(
     // Le nom d'hote est webinfo a l'IUT
@@ -14,7 +17,12 @@ class Conf {
     // A l'IUT, c'est votre mdp (INE par defaut)
     // Sur votre machine personelle, vous avez creez ce mdp a l'installation
     'password' => '081080243CA'
+
   );
+
+  static public function getDebug() {
+    return self::$debug;
+  }
    
   static public function getLogin() {
     return self::$databases['login'];

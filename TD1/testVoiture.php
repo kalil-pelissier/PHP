@@ -5,9 +5,8 @@
 </head>
 <body>
 	<?php
-		require_once('voiture.php');
-		$voiture1=new Voiture("mercedes","bleu","465FH5JS");
-		$voiture1->afficher();
+		require_once('./utilisateur.php');
+		var_dump(Utilisateur::getAllUtilisateurs());
 	?> 
 </body>
 </html>

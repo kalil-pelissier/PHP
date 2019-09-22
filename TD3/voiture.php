@@ -65,6 +65,34 @@ public static function getAllVoitures() {
     $tab_voit = $rep->fetchAll();
     return $tab_voit;
 }
+
+public static function getVoitureByImmat($immat) {
+    $sql = "SELECT * from voiture WHERE immatriculation=:nom_tag";
+    // Préparation de la requête
+    $req_prep = Model::$pdo->prepare($sql);
+
+    $values = array(
+        "nom_tag" => $immat,
+        //nomdutag => valeur, ...
+    );
+    // On donne les valeurs et on exécute la requête   
+    $req_prep->execute($values);
+
+    // On récupère les résultats comme précédemment
+    $req_prep->setFetchMode(PDO::FETCH_CLASS, 'Voiture');
+    $tab_voit = $req_prep->fetchAll();
+    // Attention, si il n'y a pas de résultats, on renvoie false
+    if (empty($tab_voit))
+        return false;
+    return $tab_voit[0];
+}
+
+public function save() {
+  $immat = $this->getImmatriculation();
+  $marque = $this->getMarque();
+  $color = $this->getCouleur();
+  Model::$pdo->query("INSERT INTO Voiture (immatriculation, marque, couleur) VALUES ('$immat', '$marque', '$color')");
+}
            
   // une methode d'affichage.
   public function afficher() {

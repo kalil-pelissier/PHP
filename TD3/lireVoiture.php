@@ -8,8 +8,8 @@ $construc = array(
 
 $maVoiture2 = new Voiture($construc);
 
-/*$maVoiture2->save();
-*/
+$maVoiture2->save();
+
 $maVoiture = Voiture::getVoitureByImmat("JDB54555");
 
 $maVoiture->afficher();

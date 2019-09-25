@@ -88,10 +88,22 @@ public static function getVoitureByImmat($immat) {
 }
 
 public function save() {
+
   $immat = $this->getImmatriculation();
   $marque = $this->getMarque();
   $color = $this->getCouleur();
-  Model::$pdo->query("INSERT INTO Voiture (immatriculation, marque, couleur) VALUES ('$immat', '$marque', '$color')");
+
+  $sql = "INSERT INTO voiture (immatriculation, marque, couleur) VALUES (:immat_sql,:marque_sql,:color_sql)";
+  // Préparation de la requête
+  $req_prep = Model::$pdo->prepare($sql);
+
+  $values = array(
+        "immat_sql" => $immat,
+        "marque_sql" => $marque,
+        "color_sql" => $color,
+        //nomdutag => valeur, ...
+    );
+  $req_prep->execute($values);
 }
            
   // une methode d'affichage.

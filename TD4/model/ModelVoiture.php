@@ -79,7 +79,7 @@ public static function getVoitureByImmat($immat) {
     $req_prep->execute($values);
 
     // On récupère les résultats comme précédemment
-    $req_prep->setFetchMode(PDO::FETCH_CLASS, 'Voiture');
+    $req_prep->setFetchMode(PDO::FETCH_CLASS, 'ModelVoiture');
     $tab_voit = $req_prep->fetchAll();
     // Attention, si il n'y a pas de résultats, on renvoie false
     if (empty($tab_voit))
@@ -107,11 +107,11 @@ public function save() {
 }
            
   // une methode d'affichage.
-  // public function afficher() {
-  //   echo "Marque: ".$this->marque;
-  //   echo "<br>Couleur: ".$this->couleur;
-  //   echo "<br>Immatriculation: ".$this->immatriculation."<br><br>";
-  // }
+   // public static function afficher() {
+   //   echo "Marque: ".$this->marque;
+   //   echo "<br>Couleur: ".$this->couleur;
+   //   echo "<br>Immatriculation: ".$this->immatriculation."<br><br>";
+   // }
 }
 ?>
 

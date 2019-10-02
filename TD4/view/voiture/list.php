@@ -6,8 +6,11 @@
     </head>
     <body>
         <?php
-        foreach ($tab_v as $v)
-            echo '<p> Voiture d\'immatriculation ' . $v->getImmatriculation() . '.</p>';
+        foreach ($tab_v as $v) {
+            $immat = $v->getImmatriculation();
+            echo '<p> Voiture d\'immatriculation ' . '<a href=http://webinfo/~pelissierk/PHP/TD4/controller/routeur.php?action=read&immat=' . $immat . '>' . $v->getImmatriculation() . '<a>' . '.</p>';
+        }
+           
         ?>
     </body>
 </html>

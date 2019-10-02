@@ -7,7 +7,8 @@
    
     <body>
 
-        <form method="post" action="creerVoiture.php">
+        <form method="get" action="./routeur.php?action=created">
+          <input type="hidden" name="action" value="created">
           <fieldset>
             <legend>Mon formulaire :</legend>
             <p>

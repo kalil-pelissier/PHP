@@ -17,4 +17,4 @@
 
 <!-- wampeserveur:
 '<a href=http://localhost/PHP/TD5/controller/routeur.php?action=read&immat='
- -->
+'<a href=http://webinfo/~pelissierk/PHP/TD5/controller/routeur.php?action=read&immat=' -->

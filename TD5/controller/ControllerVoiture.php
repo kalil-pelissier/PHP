@@ -1,5 +1,5 @@
 <?php
-require_once ('../model/ModelVoiture.php'); // chargement du modèle
+require_once File::build_path(array('model','ModelVoiture.php')); 
 
 class ControllerVoiture {
     public static function readAll() {

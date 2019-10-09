@@ -1,4 +1,6 @@
 <?php
-require_once'/home/ann2/pelissierk/public_html/PHP/TD5/lib/File.php';
+// $ROOT_FOLDER = __DIR__;
+// $DS = DIRECTORY_SEPARATOR;
+require_once __DIR__ . DIRECTORY_SEPARATOR . "lib" . DIRECTORY_SEPARATOR . "File.php";
 require_once File::build_path(array('controller','routeur.php'));
 ?>	

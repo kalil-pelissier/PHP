@@ -7,7 +7,7 @@
    
     <body>
 
-        <form method="get" action="./routeur.php?action=created">
+        <form method="get" action="./index.php?action=created">
           <input type="hidden" name="action" value="created">
           <fieldset>
             <legend>Mon formulaire :</legend>

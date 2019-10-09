@@ -6,9 +6,12 @@
     </head>
     <body>
         <?php  
-            echo "Marque: ".$v->getmarque();
-            echo "<br>Couleur: ".$v->getCouleur();
-            echo "<br>Immatriculation: ".$v->getImmatriculation();
+         $vImmatriculation = htmlspecialchars($v->getImmatriculation());
+         $vMarque = htmlspecialchars($v->getmarque());
+         $vCouleur = htmlspecialchars($v->getCouleur());
+            echo "Marque: ".$vMarque;
+            echo "<br>Couleur: ".$vCouleur;
+            echo "<br>Immatriculation: ".$vImmatriculation;
         ?>
     </body>
 </html>

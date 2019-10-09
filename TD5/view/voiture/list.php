@@ -7,8 +7,9 @@
     <body>
         <?php
         foreach ($tab_v as $v) {
-            $immat = $v->getImmatriculation();
-            echo '<p> Voiture d\'immatriculation ' . '<a href=http://webinfo/~pelissierk/PHP/TD5/index.php?action=read&immat=' . $immat . '>' . $v->getImmatriculation() . '<a>' . '.</p>';
+            $vImmatriculation = htmlspecialchars($v->getImmatriculation());
+            $immat = $vImmatriculation;
+            echo '<p> Voiture d\'immatriculation ' . '<a href=http://webinfo/~pelissierk/PHP/TD5/index.php?action=read&immat=' . $immat . '>' .  $vImmatriculation . '<a>' . '.</p>';
         }
            
         ?>

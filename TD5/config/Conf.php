@@ -16,7 +16,7 @@ class Conf {
     'login' => 'pelissierk',
     // A l'IUT, c'est votre mdp (INE par defaut)
     // Sur votre machine personelle, vous avez creez ce mdp a l'installation
-    'password' => '081080243CA'
+    'password' => 'EuYzesxR'
 
   );
 

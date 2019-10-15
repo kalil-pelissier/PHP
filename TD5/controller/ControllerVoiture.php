@@ -3,8 +3,8 @@ require_once File::build_path(array('model','ModelVoiture.php'));
 
 class ControllerVoiture {
     public static function readAll() {
-        $controller = "voiture";
-        $view = "list";
+        $controleur = "voiture";
+        $view = "list.php";
         $tab_v = ModelVoiture::getAllVoitures();     //appel au modèle pour gerer la BD
         require File::build_path(array('view', 'view.php'));  //"redirige" vers la vue
     }
@@ -13,12 +13,15 @@ class ControllerVoiture {
 
     	$immat = $_GET['immat'];
     	$v = ModelVoiture::getVoitureByImmat($immat);
+        $controleur = "voiture";
 
     	if($v==false) {
-    		require File::build_path(array('view', 'voiture', 'error.php'));
+            $view = "error.php";
+    		require File::build_path(array('view', 'view.php'));
     	}
     	else {
-    		require File::build_path(array('view', 'voiture', 'detail.php'));
+            $view = "detail.php";
+    		require File::build_path(array('view', 'view.php'));
     	}
 
     }

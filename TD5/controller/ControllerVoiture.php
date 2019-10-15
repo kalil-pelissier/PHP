@@ -3,6 +3,8 @@ require_once File::build_path(array('model','ModelVoiture.php'));
 
 class ControllerVoiture {
     public static function readAll() {
+        $controller = "voiture";
+        $view = "list";
         $tab_v = ModelVoiture::getAllVoitures();     //appel au modèle pour gerer la BD
         require File::build_path(array('view', 'view.php'));  //"redirige" vers la vue
     }

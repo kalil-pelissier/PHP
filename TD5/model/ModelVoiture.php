@@ -35,13 +35,6 @@ class ModelVoiture {
       $this->immatriculation = $immatriculation2;
     }
   }
-      
-  // // un constructeur
-  // public function __construct($m, $c, $i)  {
-  //  $this->marque = $m;
-  //  $this->couleur = $c;
-  //  $this->immatriculation = $i;
-  // } 
 
   // La syntaxe ... = NULL signifie que l'argument est optionel
   // Si un argument optionnel n'est pas fourni,
@@ -56,10 +49,10 @@ class ModelVoiture {
       $this->$key = $value;
     }
   }
-
 }
 
 public static function getAllVoitures() {
+
     $rep = Model::$pdo->query("SELECT * FROM voiture");
     $rep->setFetchMode(PDO::FETCH_CLASS, 'ModelVoiture');
     $tab_voit = $rep->fetchAll();

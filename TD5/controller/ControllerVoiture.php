@@ -36,5 +36,11 @@ class ControllerVoiture {
     	self::readAll();	
     }
 
+    public static function error() {
+        $controleur = "voiture";
+        $view = "rongArg.php";
+        require File::build_path(array('view', 'view.php'));
+    }
+
 }
 ?>

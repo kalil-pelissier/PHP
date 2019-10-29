@@ -7,7 +7,7 @@
     <body>
         <?php   
             if($v==false) {
-                echo "Cette Voiture n'existe dans notre BD !";
+                echo "Cette voiture n'existe pas ";
             }
         ?>
     </body>

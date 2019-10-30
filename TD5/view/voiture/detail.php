@@ -12,7 +12,8 @@
             echo "Marque: ".$vMarque;
             echo "<br>Couleur: ".$vCouleur;
             echo "<br>Immatriculation: ".$vImmatriculation;
-            echo "<br><a href=http://localhost/PHP/TD5/index.php?action=delete&immat=" . rawurlencode($v->getImmatriculation()) . '>' . 'SUPPRIMER' . '<a>'
+            echo "<br><a href=http://localhost/PHP/TD5/index.php?action=delete&immat=" . rawurlencode($v->getImmatriculation()) . '>' . 'SUPPRIMER' . '<a>';
+            echo "<br><a href=http://localhost/PHP/TD5/index.php?action=update&immat=" . rawurlencode($v->getImmatriculation()) . '>' . 'MODIFIER' . '<a>';
         ?>
     </body>
 </html>

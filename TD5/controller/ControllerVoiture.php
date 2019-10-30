@@ -45,6 +45,16 @@ class ControllerVoiture {
         require File::build_path(array('view', 'view.php'));
     }
 
+    public static function update(){
+        $immat = $_GET['immat'];
+        $v = ModelVoiture::getVoitureByImmat($immat);
+        $marque = $v->getCouleur();
+        $couleur = $v->getMarque();
+        $controleur = "voiture";
+        $view = "update.php";
+        require File::build_path(array('view', 'view.php'));
+    }
+
     public static function error() {
         $controleur = "voiture";
         $view = "rongArg.php";

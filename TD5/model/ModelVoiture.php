@@ -99,12 +99,19 @@ public function save() {
   $req_prep->execute($values);
 }
            
-  // une methode d'affichage.
-   // public static function afficher() {
-   //   echo "Marque: ".$this->marque;
-   //   echo "<br>Couleur: ".$this->couleur;
-   //   echo "<br>Immatriculation: ".$this->immatriculation."<br><br>";
-   // }
+public static function deleteByImmat($immat){
+  $sql = "DELETE from voiture WHERE immatriculation=:nom_tag";
+    // Préparation de la requête
+    $req_prep = Model::$pdo->prepare($sql);
+
+    $values = array(
+        "nom_tag" => $immat,
+        //nomdutag => valeur, ...
+    );
+    // On donne les valeurs et on exécute la requête   
+    $req_prep->execute($values);
+}
+
 }
 ?>
 

@@ -36,6 +36,15 @@ class ControllerVoiture {
     	self::readAll();	
     }
 
+    public static function delete() {
+        $immat = $_GET['immat'];
+        ModelVoiture::deleteByImmat($immat);
+        $tab_v = ModelVoiture::getAllVoitures();
+        $controleur = "voiture";
+        $view = "deleted.php";
+        require File::build_path(array('view', 'view.php'));
+    }
+
     public static function error() {
         $controleur = "voiture";
         $view = "rongArg.php";

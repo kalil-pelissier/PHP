@@ -1,7 +1,7 @@
 
 
-        <form method="get" action="./index.php?">
-          <input type="hidden" name="action" value="created">
+        <form method="get" action="./index.php">
+          <input type="hidden" name="action" value="updated">
           <fieldset>
             <legend>Mon formulaire :</legend>
             <p>

@@ -112,6 +112,21 @@ public static function deleteByImmat($immat){
     $req_prep->execute($values);
 }
 
+public static function update($data) {
+  $sql = "UPDATE voiture SET couleur=:couleur, marque=:marque WHERE immatriculation=:immatriculation";
+    // Préparation de la requête
+    $req_prep = Model::$pdo->prepare($sql);
+
+    $values = array(
+        "immatriculation" => $_GET['immatriculation'],
+        "marque" => $_GET['marque'],
+        "couleur" => $_GET['couleur'],
+        //nomdutag => valeur, ...
+    );
+    // On donne les valeurs et on exécute la requête   
+    $req_prep->execute($values);
+}
+
 }
 ?>
 

@@ -55,6 +55,15 @@ class ControllerVoiture {
         require File::build_path(array('view', 'view.php'));
     }
 
+    public static function updated() {
+        ModelVoiture::update($_GET);
+        $immat = $_GET['immatriculation'];
+        $controleur = "voiture";
+        $view = "updated.php";
+        $tab_v = ModelVoiture::getAllVoitures();
+        require File::build_path(array('view', 'view.php'));
+    }
+
     public static function error() {
         $controleur = "voiture";
         $view = "rongArg.php";

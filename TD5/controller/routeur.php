@@ -1,8 +1,9 @@
 <?php
 require_once File::build_path(array('controller','ControllerVoiture.php'));
+require_once File::build_path(array('controller','ControllerUtilisateur.php'));
 
 if(!isset($_GET['action'])) {
-	$_GET['action'] = 'readAll';
+	$_GET['action'] = 'selectAll';
 }
 
 if(!isset($_GET['controller'])) {

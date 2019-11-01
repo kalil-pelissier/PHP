@@ -2,13 +2,13 @@
 
 require_once File::build_path(array('model','Model.php'));
 
-class ModelVoiture {
+class ModelVoiture extends Model{
    
   private $marque;
   private $couleur;
   private $immatriculation;
-      
-  // un getter      
+  protected static $object = 'voiture';
+            
   public function getMarque() {
        return $this->marque;  
   }
@@ -51,13 +51,13 @@ class ModelVoiture {
   }
 }
 
-public static function getAllVoitures() {
+/*public static function getAllVoitures() {
 
     $rep = Model::$pdo->query("SELECT * FROM voiture");
     $rep->setFetchMode(PDO::FETCH_CLASS, 'ModelVoiture');
     $tab_voit = $rep->fetchAll();
     return $tab_voit;
-}
+}*/
 
 public static function getVoitureByImmat($immat) {
     $sql = "SELECT * from voiture WHERE immatriculation=:nom_tag";

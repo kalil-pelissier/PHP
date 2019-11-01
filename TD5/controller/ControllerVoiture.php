@@ -5,14 +5,14 @@ class ControllerVoiture {
     public static function readAll() {
         $controleur = "voiture";
         $view = "list.php";
-        $tab_v = ModelVoiture::getAllVoitures();     //appel au modèle pour gerer la BD
+        $tab_v = ModelVoiture::selectAll();     //appel au modèle pour gerer la BD
         require File::build_path(array('view', 'view.php'));  //"redirige" vers la vue
     }
 
     public static function read() {
 
-    	$immat = $_GET['immat'];
-    	$v = ModelVoiture::getVoitureByImmat($immat);
+    	$immat = $_GET['immatriculation'];
+    	$v = ModelVoiture::select($immat);
         $controleur = "voiture";
 
     	if($v==false) {
@@ -33,13 +33,13 @@ class ControllerVoiture {
     public static function created() {
     	$modelCar = new ModelVoiture($_GET); 
     	$modelCar->save();
-    	self::readAll();	
+    	self::readAll();   	
     }
 
     public static function delete() {
         $immat = $_GET['immat'];
         ModelVoiture::deleteByImmat($immat);
-        $tab_v = ModelVoiture::getAllVoitures();
+        $tab_v = ModelVoiture::selectAll();
         $controleur = "voiture";
         $view = "deleted.php";
         require File::build_path(array('view', 'view.php'));
@@ -60,7 +60,7 @@ class ControllerVoiture {
         $immat = $_GET['immatriculation'];
         $controleur = "voiture";
         $view = "updated.php";
-        $tab_v = ModelVoiture::getAllVoitures();
+        $tab_v = ModelVoiture::selectAll();
         require File::build_path(array('view', 'view.php'));
     }
 

@@ -8,6 +8,7 @@ class ModelVoiture extends Model{
   private $couleur;
   private $immatriculation;
   protected static $object = 'voiture';
+  protected static $primary='immatriculation';
             
   public function getMarque() {
        return $this->marque;  
@@ -59,7 +60,7 @@ class ModelVoiture extends Model{
     return $tab_voit;
 }*/
 
-public static function getVoitureByImmat($immat) {
+/*public static function getVoitureByImmat($immat) {
     $sql = "SELECT * from voiture WHERE immatriculation=:nom_tag";
     // Préparation de la requête
     $req_prep = Model::$pdo->prepare($sql);
@@ -78,7 +79,7 @@ public static function getVoitureByImmat($immat) {
     if (empty($tab_voit))
         return false;
     return $tab_voit[0];
-}
+}*/
 
 public function save() {
 

@@ -7,7 +7,8 @@ class ModelUtilisateur extends Model{
 	private $login;
 	private $nom;
 	private $prenom;
-  protected static $object = 'utilisateur';
+  protected static $object = 'Utilisateur';
+  protected static $primary='login';
 
 	public function getNom() {
        return $this->nom;  

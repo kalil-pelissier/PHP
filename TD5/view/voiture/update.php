@@ -6,15 +6,15 @@
             <legend>Mon formulaire :</legend>
             <p>
               <label for="immat_id">Immatriculation</label> :
-              <input type="text" value=<?php echo $immat ?> name="immatriculation" id="immat_id" <?php echo $option ?>/>
+              <input type="text" value="<?php echo $immat ?>" name="immatriculation" id="immat_id" <?php echo $option ?>/>
             </p>
             <p>
               <label for="marque_id">Marque</label>
-              <input type="text" value=<?php echo $marque ?> name="marque" id="marque_id" required/>
+              <input type="text" value="<?php echo $marque ?>" name="marque" id="marque_id" required/>
             </p>
             <p>
               <label for="color_id">Couleur</label>
-              <input type="text" value=<?php echo $couleur ?> name="couleur" id="color_id" required/>
+              <input type="text" value="<?php echo $couleur ?>" name="couleur" id="color_id" required/>
             </p>
             <p>
              <input type="submit" value="Envoyer" />

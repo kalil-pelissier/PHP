@@ -6,7 +6,6 @@
     echo "<br>Nom: ".$userName;
     echo "<br>Prenom: ".$userSurname;
    	echo "<br><a href=http://localhost/PHP/TD5/index.php?controller=utilisateur&action=delete&login=" . rawurlencode($u->getLogin()) . '>' . 'SUPPRIMER' . '<a>';
-
-   /* echo "<br><a href=http://localhost/PHP/TD5/index.php?action=update&immat=" . rawurlencode($v->getImmatriculation()) . '>' . 'MODIFIER' . '<a>';*/
+    echo "<br><a href=http://localhost/PHP/TD5/index.php?controller=utilisateur&action=update&login=" . rawurlencode($u->getLogin()) . '>' . 'MODIFIER' . '<a>';
 ?>
     

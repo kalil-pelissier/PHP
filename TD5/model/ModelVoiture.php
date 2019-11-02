@@ -100,7 +100,7 @@ public function save() {
   $req_prep->execute($values);
 }
            
-public static function deleteByImmat($immat){
+/*public static function deleteByImmat($immat){
   $sql = "DELETE from voiture WHERE immatriculation=:nom_tag";
     // Préparation de la requête
     $req_prep = Model::$pdo->prepare($sql);
@@ -111,7 +111,7 @@ public static function deleteByImmat($immat){
     );
     // On donne les valeurs et on exécute la requête   
     $req_prep->execute($values);
-}
+}*/
 
 public static function update($data) {
   $sql = "UPDATE voiture SET couleur=:couleur, marque=:marque WHERE immatriculation=:immatriculation";

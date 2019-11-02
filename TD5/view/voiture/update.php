@@ -1,12 +1,12 @@
 
 
         <form method="get" action="./index.php">
-          <input type="hidden" name="action" value="updated">
+          <input type="hidden" name="action" value=<?php echo $action ?>>
           <fieldset>
             <legend>Mon formulaire :</legend>
             <p>
               <label for="immat_id">Immatriculation</label> :
-              <input type="text" value=<?php echo $immat ?> name="immatriculation" id="immat_id" readonly/>
+              <input type="text" value=<?php echo $immat ?> name="immatriculation" id="immat_id" <?php echo $option ?>/>
             </p>
             <p>
               <label for="marque_id">Marque</label>

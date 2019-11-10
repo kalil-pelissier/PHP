@@ -31,7 +31,7 @@ class ControllerVoiture {
         $immat = "";
         $marque = "";
         $couleur = "";
-        $option = 'require';//require si l'action est create readonly sinon
+        $option = 'required';//require si l'action est create readonly sinon
         $action = 'created';
     	require File::build_path(array('view', 'view.php'));
     }
